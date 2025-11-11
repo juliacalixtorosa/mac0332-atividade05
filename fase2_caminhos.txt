@@ -1,0 +1,35 @@
+CAMINHOS EXECUTÁVEIS
+
+Caminho 1: compra inválida (valor_compra <= 0) -> retorno 0
+
+Caminho 2: cliente premium (desconto = 0.15), com cupom DESC10 e valor_compra > 100 (desconto = 0.25 e sem taxa de entrega de 5) -> retorno round (valor_compra*0.75, 2)
+Caminho 2: cliente premium (desconto = 0.15), com cupom DESC10 e valor_compra < 1000/17 (desconto = 0.15 e com taxa de entrega de 5) -> retorno round(valor_compra*0.85 + 5, 2)
+Caminho 3: cliente premium (desconto = 0.15), com cupom DESC10 e 100 >= valor_compra >= 1000/17 (desconto 0.15 e sem taxa de entrega de 5) -> retorno round(valor_compra*0.85, 2)
+Caminho 4: cliente premium (desconto = 0.15), sem cupom DESC10 e valor_compra < 1000/17 (desconto = 0.15 e com taxa de entrega de 5) -> retorno round(valor_compra*0.85 + 5, 2)
+Caminho 5: cliente premium (desconto = 0.15), sem cupom DESC10 e valor_compra >= 1000/17 (desconto = 0.15 e sem taxa de entrega de 5) -> retorno round(valor_compra*0.85, 2)
+
+Caminho 6: cliente regular (desconto = 0.05), com cupom DESC10 e valor_compra > 100 (desconto = 0.15 e sem taxa de entrega de 5) -> retorno round (valor_compra*0.85, 2)
+Caminho 7: cliente regular (desconto = 0.05), com cupom DESC10 e valor_compra < 1000/19 (desconto = 0.05 e com taxa de entrega de 5) -> retorno round(valor_compra*0.95 + 5, 2)
+Caminho 8: cliente regular (desconto = 0.05), com cupom DESC10 e 100 >= valor_compra >= 1000/19 (desconto 0.05 e sem taxa de entrega de 5) -> retorno round(valor_compra*0.95, 2)
+Caminho 9: cliente regular (desconto = 0.05), sem cupom DESC10 e valor_compra < 1000/19 (desconto = 0.05 e com taxa de entrega de 5) -> retorno round(valor_compra*0.95 + 5, 2)
+Caminho 10: cliente regular (desconto = 0.05), sem cupom DESC10 e valor_compra >= 1000/17 (desconto = 0.05 e sem taxa de entrega de 5) -> retorno round(valor_compra*0.95, 2)
+
+Caminho 11: cliente não-regular e não-premium (desconto = 0), com cupom DESC10 e valor_compra > 100 (desconto = 0.10 e sem taxa de entrega de 5) -> retorno round (valor_compra*0.9, 2)
+Caminho 12: cliente não-regular e não-premium (desconto = 0), com cupom DESC10 e valor_compra < 50 (desconto = 0 e com taxa de entrega de 5) -> retorno round(valor_compra + 5, 2)
+Caminho 13: cliente não-regular e não-premium (desconto = 0), com cupom DESC10 e 100 >= valor_compra >= 50 (desconto 0 e sem taxa de entrega de 5) -> retorno round(valor_compra, 2)
+Caminho 14: cliente não-regular e não-premium (desconto = 0), sem cupom DESC10 e valor_compra < 50 (desconto = 0 e com taxa de entrega de 5) -> retorno round(valor_compra + 5, 2)
+Caminho 15: cliente não-regular e não-premium (desconto = 0), sem cupom DESC10 e valor_compra >= 50 (desconto = 0 e sem taxa de entrega de 5) -> retorno round(valor_compra, 2)
+
+
+CAMINHOS NÃO EXECUTÁVEIS
+
+Caminho 1: compra inválida (valor_compra <= 0) e retorno != 0
+Caminho 2: cliente premium, cliente regular e cliente não-premium e não-regular
+Caminho 3: cliente premium e cliente regular
+Caminho 4: cliente premium e cliente não-premium e não-regular
+Caminho 5: cliente regular e cliente não-premium e não-regular
+Caminho 6: cliente premium, regular, ou não-premium e não-regular com cupom DESC10, valor_compra > 100 e valor final < 50
+
+
+
+
