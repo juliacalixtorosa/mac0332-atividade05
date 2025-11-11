@@ -63,7 +63,7 @@ A partir da estrutura acima, foram enumerados todos os caminhos lógicos possív
 
 ### Critério 1 — Todos-Nós
 
-Cada nó (1–14) deve ser atingido por pelo menos um caso de teste.
+Cada nó (1–13) deve ser atingido por pelo menos um caso de teste.
 
 | Caso de Teste | Condição simulada                          | Nós cobertos                         |
 | ------------- | ------------------------------------------ | ------------------------------------ |
