@@ -13,7 +13,7 @@ def calcular_desconto(valor_compra, tipo_cliente, cupom):
 
     valor_final = valor_compra * (1 - desconto)          #10
 
-    if valor_final < 50:                                 #10
-        valor_final += 5  # taxa mínima de entrega       #11
+    if valor_final < 50:                                 #11
+        valor_final += 5  # taxa mínima de entrega       #12
 
-    return round(valor_final, 2)                         #12
+    return round(valor_final, 2)                         #13
